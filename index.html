@@ -1,34 +1,93 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NR01 - Avaliação Ocupacional</title>
-  <link rel="stylesheet" href="style.css"/>
-  https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h2>NR01 - Avaliação Ocupacional</h2>
-      <button id="startBtn">Iniciar Avaliação</button>
-    </header>
+/* Estilo geral do corpo */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-    <div id="quiz" class="hidden">
-      <div id="questionBox">
-        <p id="questionText"></p>
-        <ul id="optionsList"></ul>
-      </div>
-      <div class="controls">
-        <button id="prevBtn">Anterior</button>
-        <button id="nextBtn">Próxima</button>
-     "></div>
-      <button id="exportBtn">Exportar para Excel</button>
-      <button id="restartBtn">Refazer</button>
-    </div>
-  </div>
+/* Moldura simulando um smartphone */
+.smartphone-frame {
+  width: 375px; /* largura típica de smartphone */
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+/* Container interno */
+.container {
+  max-width: 100%;
+  padding: 1.5rem;
+}
 
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Botões */
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  border: none;
+  background-color: #0066cc;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+/* Elementos ocultos */
+.hidden {
+  display: none;
+}
+
+/* Caixa da pergunta */
+#questionBox {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Lista de opções */
+#optionsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#optionsList li {
+  margin-bottom: 0.5rem;
+}
+
+/* Controles (botões de ação) */
+.controls {
+  text-align: center;
+}
+
+/* Resultados */
+#results {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+/* Resumo final */
+#summary {
+  margin-top: 1rem;
+}
